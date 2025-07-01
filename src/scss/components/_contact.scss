@@ -1,0 +1,46 @@
+@use "../abstract/mixins" as *;
+@use "../abstract/colors" as *;
+@use "../base/reset" as *;
+
+.contact {
+  @include genstyle();
+  .container {
+    .contact-info {
+      @include flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 auto;
+      gap: 1rem;
+      background-color: gtclr(primary);
+      padding: 1rem;
+      border-radius: 50px;
+      width: 50%;
+      a {
+        text-decoration: none;
+        color: gtclr(whitecl);
+        font-size: 1.2rem;
+        &:hover {
+          text-decoration: underline;
+        }
+        .icon {
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+}
+@include mediaquery(765px) {
+  .contact {
+    .container {
+      .contact-info {
+        width: 100%;
+        a {
+          @include flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

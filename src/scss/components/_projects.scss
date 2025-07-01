@@ -1,0 +1,98 @@
+@use "../abstract/mixins" as *;
+@use "../abstract/colors" as *;
+@use "../base/reset" as *;
+.projects {
+  @include genstyle();
+  .container {
+    .project-details {
+      width: 400px;
+      padding: 2rem 1rem;
+      margin: 0 auto;
+      border-radius: 25px;
+      position: relative;
+      background-color: gtclr(whitecl);
+      padding: 1rem;
+      overflow: hidden;
+      isolation: isolate;
+      box-shadow: 0 0 8px 2px rgba(128, 128, 128, 0.105);
+      transition: transform 0.4s ease-in;
+      will-change: transform;
+      img {
+        border-radius: 25px;
+        max-width: 100%;
+        margin: 0 auto;
+        object-fit: contain;
+      }
+      h1 {
+        font-weight: 800;
+        text-align: center;
+        margin: 0.6rem 0;
+      }
+      .project-links {
+        margin-top: 0.8rem;
+        padding: 1rem 0;
+        @include flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        a {
+          text-decoration: none;
+          color: gtclr(text);
+          font-weight: 700;
+          border: 1px solid gtclr(text);
+          padding: 0.5rem 1.3rem;
+          border-radius: 25px;
+          transition: 0.3s;
+          .icon {
+            margin-right: 5px;
+          }
+          &:hover,
+          &:active {
+            color: gtclr(whitecl);
+            border: 1px solid gtclr(primary);
+            background-color: gtclr(primary);
+          }
+        }
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: conic-gradient(
+          gtclr(primary) 0deg,
+          transparent 60deg,
+          transparent 180deg,
+          gtclr(primary) 180deg,
+          transparent 240deg
+        );
+        inset: -50%;
+        width: 200%;
+        height: 200%;
+        border-radius: 25px;
+        animation: rotate 8s linear infinite;
+        z-index: -2;
+        pointer-events: none;
+      }
+      &:hover {
+        transform: scale(0.98);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 5px;
+        background: gtclr(whitecl);
+        border-radius: calc(25px - 5px);
+        z-index: -1;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

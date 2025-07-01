@@ -1,0 +1,86 @@
+@use "../abstract/mixins" as *;
+@use "../abstract/colors" as *;
+@use "../base/reset" as *;
+.about {
+  @include genstyle();
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .about-image {
+      @include heroImg;
+    }
+    .about-txt {
+      flex-basis: 50%;
+      display: grid;
+      grid-auto-rows: min-content;
+      gap: 20px 30px;
+      .about-txt_exp {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .about-txt_ed {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      .box {
+        border: 1px solid gtclr(greycl);
+        border-radius: 25px;
+        padding: 25px;
+        text-align: center;
+        .box-icon {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+          color: gtclr(primary);
+        }
+        h3 {
+          font-weight: 800;
+          font-size: 1.2rem;
+          color: gtclr(text);
+        }
+      }
+      p {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+      }
+    }
+  }
+}
+@include mediaquery(992px) {
+  .about {
+    .container {
+      gap: 1rem;
+      .about-image {
+        flex-basis: 100%;
+        img {
+          margin: 0 auto;
+          height: 400px;
+        }
+      }
+      .about-txt {
+        flex-basis: 100%;
+      }
+    }
+  }
+}
+@include mediaquery(576px) {
+  .about {
+    .container {
+      .about-txt {
+        grid-template-rows: 1fr;
+        .about-txt_exp {
+          grid-column: 1 / span 2;
+          grid-row: revert;
+        }
+        .about-txt_ed {
+          grid-column: 1 / span 2;
+          grid-row: revert;
+        }
+        p {
+          grid-row: revert;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@use "../abstract/colors" as *;
+@use "../abstract/mixins" as *;
+@use "../base/reset" as *;
+footer {
+  @include genstyle();
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 1rem;
+  b {
+    font-weight: 800;
+  }
+}

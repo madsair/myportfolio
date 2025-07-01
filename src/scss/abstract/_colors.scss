@@ -1,0 +1,17 @@
+@use "sass:map";
+
+$colors: (
+  primary: #43ac51,
+  hover: #43ac51,
+  text: #161617,
+  greycl: #777777,
+  light-grey: #d2cfcfad,
+  back-grey: #f2f2f2,
+  whitecl: #ffffff,
+);
+/* colors map */
+/* colors function */
+@function gtclr($val) {
+  $color: map.get($colors, $val);
+  @return $color;
+}
