@@ -5,7 +5,7 @@
   @include genstyle();
   .container {
     .project-details {
-      width: 400px;
+      max-width: 400px;
       padding: 2rem 1rem;
       margin: 0 auto;
       border-radius: 25px;
