@@ -1,5 +1,5 @@
 import { faEye } from "@fortawesome/free-solid-svg-icons";
-import Soteb from "../assets/images/soteb.png";
+import Soteb from "/images/soteb.png";
 import Title from "./Title/Title";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
