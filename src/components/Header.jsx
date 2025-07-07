@@ -9,8 +9,8 @@ const Header = () => {
     <header>
       <div className="container">
         <img src={Logo} alt="Logo" />
-        <nav>
-          <ul className={`${menuOpen ? "active" : ""}`}>
+        <nav className={`${menuOpen ? "active" : ""}`}>
+          <ul>
             <li>
               <a href="#about">About</a>{" "}
             </li>

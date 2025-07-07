@@ -13,9 +13,9 @@ const projData = [
 ];
 const Projects = () => {
   return (
-    <section className="projects hidden" id="projects" data-animate="right">
+    <section className="projects" id="projects">
       <Title headOne="Browse My" headTwo="Projects" />
-      <div className="container">
+      <div className="container hidden" data-animate="right">
         {" "}
         {projData.map((proj, id) => (
           <div className="project-details" key={id}>
