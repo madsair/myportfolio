@@ -3,6 +3,7 @@
 @use "../base/reset" as *;
 .skills {
   @include genstyle();
+  overflow: hidden;
   .container {
     display: flex;
     gap: 3rem;

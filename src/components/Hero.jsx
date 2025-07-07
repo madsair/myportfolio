@@ -12,7 +12,10 @@ const Hero = () => {
           <h1>El Mahdi Noussair</h1>
           <h2>Web Developper</h2>{" "}
           <div className="hero-txt__buttons">
-            <a href="../../public/El_Mahdi_Noussair_Lebenslauf.pdf">
+            <a
+              href="/El_Mahdi_Noussair_Lebenslauf.pdf"
+              download="El_Mahdi_Noussair_Lebenslauf.pdf"
+            >
               Download CV
             </a>
             <a href="#contact">Contact Info</a>

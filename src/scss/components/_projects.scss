@@ -3,6 +3,7 @@
 @use "../base/reset" as *;
 .projects {
   @include genstyle();
+  overflow: hidden;
   .container {
     .project-details {
       max-width: 400px;
