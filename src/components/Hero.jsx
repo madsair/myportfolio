@@ -18,14 +18,14 @@ const Hero = () => {
             <a href="#contact">Contact Info</a>
           </div>
           <div className="hero-icons">
-            <a href="">
+            <a href="https://www.linkedin.com/in/el-mahdi-noussair-91a0262b7/">
               {" "}
               <FontAwesomeIcon
                 icon={faLinkedinIn}
                 className="social-icons link"
               />
             </a>
-            <a href="">
+            <a href="https://github.com/madsair">
               <FontAwesomeIcon icon={faGithub} className="social-icons" />
             </a>
           </div>
