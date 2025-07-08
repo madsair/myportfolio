@@ -6,6 +6,8 @@
 .hero {
   margin-top: 3rem;
   font-family: "Quicksand";
+  overflow: hidden;
+
   .container {
     @include flex;
     justify-content: center;

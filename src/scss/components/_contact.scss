@@ -4,6 +4,8 @@
 
 .contact {
   @include genstyle();
+  overflow: hidden;
+
   .container {
     .contact-info {
       @include flex;
